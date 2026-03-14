@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-black">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Clean environmental storytelling website for ocean sustainability, inspired by bureo.co.">
+    <title>Ocean Sustainability | NetPlus Material</title>
+
+    <!-- Modern Typography: Inter to mimic Suisse Intl -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bureo: {
+                            black: '#111111',
+                            dark: '#1c1c1c',
+                            gray: '#f4f4f4',
+                            white: '#ffffff',
+                            accent: '#446b82', /* muted ocean teal as secondary */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        tighter: '-0.04em',
+                        tight: '-0.02em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+    <!-- Main JS -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body
+    class="bg-bureo-gray text-bureo-black font-sans antialiased overflow-x-hidden selection:bg-bureo-black selection:text-white">
+
+    <!-- 1. Navbar -->
+    <nav id="navbar"
+        class="fixed w-full top-0 z-50 transition-all duration-300 py-6 px-6 md:px-12 flex justify-between items-center bg-transparent mix-blend-difference text-white border-none">
+        <div class="text-2xl font-black tracking-tighter relative z-10 flex items-center gap-2">
+            <!-- Geometric Logo placeholder -->
+            <div class="w-6 h-6 bg-white rounded-full"></div>
+            NETPLUS®
+        </div>
+        <div class="hidden md:flex gap-8 items-center text-sm font-medium tracking-tight">
+            <a href="#mission" class="hover:opacity-70 transition-opacity">Mission</a>
+            <a href="#material" class="hover:opacity-70 transition-opacity">Material</a>
+            <a href="#process" class="hover:opacity-70 transition-opacity">Traceability</a>
+            <a href="#products" class="hover:opacity-70 transition-opacity">Partners</a>
+            <a href="login.html"
+                class="px-6 py-2.5 rounded-full bg-white text-black hover:scale-105 transition-transform font-bold">Login</a>
+        </div>
+        <!-- Mobile Menu Placeholder -->
+        <button class="md:hidden flex flex-col gap-1.5 focus:outline-none z-10 mix-blend-difference">
+            <span class="w-6 h-0.5 bg-white"></span>
+            <span class="w-6 h-0.5 bg-white"></span>
+        </button>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section id="hero"
+        class="relative h-screen flex flex-col justify-end pb-12 px-6 md:px-12 overflow-hidden bg-bureo-black">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 bg-bureo-dark">
+            <div class="absolute inset-0 bg-black/30 z-10"></div>
+            <video autoplay loop muted playsinline
+                class="absolute inset-0 w-full h-full object-cover z-0 opacity-30 mix-blend-screen pointer-events-none">
+                <source
+                    src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-the-ocean-waves-1087-large.mp4"
+                    type="video/mp4">
+            </video>
+            <!-- Simulating image cover -->
+            <div class="absolute inset-0 bg-gradient-to-t from-bureo-black via-transparent to-black/50 z-10"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl w-full mx-auto flex flex-col items-start text-left text-white mt-auto">
+            <h1
+                class="hero-title text-[12vw] md:text-[8vw] font-black leading-[0.9] tracking-tighter uppercase max-w-[90%] md:max-w-6xl">
+                100% Recycled<br>Fishing Net
+            </h1>
+
+            <div class="flex flex-col md:flex-row gap-8 justify-between items-start md:items-end w-full mt-12 md:mt-8">
+                <p class="hero-subtitle text-lg md:text-xl text-white/80 max-w-lg font-medium tracking-tight">
+                    NetPlus® is a fully traceable, premium material made entirely from discarded fishing nets,
+                    protecting our oceans and supporting coastal communities.
+                </p>
+                <div class="hero-cta flex gap-4 shrink-0">
+                    <a href="#material"
+                        class="px-8 py-4 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform tracking-tight text-sm">Discover
+                        NetPlus®</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Features Section -->
+    <section id="mission" class="py-32 px-6 md:px-12 bg-white relative z-20">
+        <div class="max-w-7xl mx-auto">
+            <div
+                class="mb-20 feature-header flex flex-col md:flex-row md:justify-between md:items-end gap-8 border-b border-black pb-12">
+                <h2
+                    class="text-5xl md:text-7xl font-black text-bureo-black tracking-tighter uppercase max-w-3xl leading-[0.9]">
+                    A Positive<br>Ripple Effect.
+                </h2>
+                <p class="text-black/60 max-w-sm text-lg font-medium tracking-tight">
+                    Transforming a devastating threat into a sustainable solution for the future of manufacturing.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Nano Banana Prompt: "sustainability icons set, ocean protection, recycled plastic, eco technology, minimal 3D icon style, white background, modern UI assets" -->
+                <!-- Feature Card 1 -->
+                <div class="feature-card p-8 bg-bureo-gray rounded-2xl group flex flex-col h-full">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-12 relative overflow-hidden shrink-0 border border-black/5">
+                        <span
+                            class="text-[10px] text-center absolute inset-1 opacity-20 font-mono flex items-center justify-center">Icon
+                            1</span>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="text-xl font-bold mb-3 tracking-tight">Ocean Protection</h3>
+                        <p class="text-black/60 text-sm font-medium leading-relaxed">Directly removing the most harmful
+                            form of ocean plastic from sensitive marine ecosystems.</p>
+                    </div>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="feature-card p-8 bg-bureo-gray rounded-2xl group flex flex-col h-full">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-12 relative overflow-hidden shrink-0 border border-black/5">
+                        <span
+                            class="text-[10px] text-center absolute inset-1 opacity-20 font-mono flex items-center justify-center">Icon
+                            2</span>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="text-xl font-bold mb-3 tracking-tight">Community Supported</h3>
+                        <p class="text-black/60 text-sm font-medium leading-relaxed">Providing financial incentives and
+                            infrastructure to coastal fishing communities worldwide.</p>
+                    </div>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="feature-card p-8 bg-bureo-gray rounded-2xl group flex flex-col h-full">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-12 relative overflow-hidden shrink-0 border border-black/5">
+                        <span
+                            class="text-[10px] text-center absolute inset-1 opacity-20 font-mono flex items-center justify-center">Icon
+                            3</span>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="text-xl font-bold mb-3 tracking-tight">Premium Quality</h3>
+                        <p class="text-black/60 text-sm font-medium leading-relaxed">Delivering uncompromised structural
+                            integrity and performance equal to virgin nylon plastics.</p>
+                    </div>
+                </div>
+
+                <!-- Feature Card 4 -->
+                <div class="feature-card p-8 bg-bureo-gray rounded-2xl group flex flex-col h-full">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-12 relative overflow-hidden shrink-0 border border-black/5">
+                        <span
+                            class="text-[10px] text-center absolute inset-1 opacity-20 font-mono flex items-center justify-center">Icon
+                            4</span>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="text-xl font-bold mb-3 tracking-tight">Fully Circular</h3>
+                        <p class="text-black/60 text-sm font-medium leading-relaxed">Designed to be continuously
+                            recycled, keeping these resources in the supply chain forever.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Material Section -->
+    <section id="material" class="py-32 px-6 md:px-12 bg-bureo-black text-white relative">
+        <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24 relative z-10">
+            <!-- Left: Content -->
+            <div class="w-full lg:w-1/2 material-content">
+                <div
+                    class="font-bold tracking-widest text-[10px] uppercase text-white/50 mb-8 pb-4 border-b border-white/20">
+                    The Material</div>
+                <h2 class="text-5xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter uppercase">
+                    Tracing<br>The Source.</h2>
+                <div class="space-y-8 text-white/80 text-lg md:text-xl font-medium tracking-tight">
+                    <p>
+                        Fishing nets are made from highly durable nylon, designed to withstand the harshest ocean
+                        conditions. When discarded, they become deadly "ghost nets" that trap marine life for centuries.
+                    </p>
+                    <p>
+                        We built a fully traceable and equitable supply chain mapping directly to the source. Creating
+                        NetPlus®—a 100% recycled nylon material that performs perfectly while drastically reducing
+                        global carbon emissions.
+                    </p>
+                </div>
+
+                <div class="mt-12 flex items-center gap-4">
+                    <a href="#process"
+                        class="px-8 py-4 border border-white/30 rounded-full hover:bg-white hover:text-black transition-colors font-bold tracking-tight text-sm">View
+                        Traceability Map</a>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div
+                class="w-full lg:w-1/2 material-image-container relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-square bg-[#1a1a1a] group">
+                <img src="https://images.unsplash.com/photo-v_m94zTBa_Q?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Recycled fishing nets forming structural fabric"
+                    class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity hover:scale-105 transition-transform duration-700">
+                <a href="https://unsplash.com/photos/v_m94zTBa_Q" target="_blank" rel="noopener noreferrer" class="absolute bottom-4 right-4 bg-white/10 backdrop-blur-md text-white border border-white/20 text-xs font-mono px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white hover:text-black flex items-center gap-1.5">
+                    Unsplash Source
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Process Section -->
+    <section id="process" class="py-32 px-6 md:px-12 bg-bureo-gray border-b border-black">
+        <div class="max-w-7xl mx-auto">
+            <div
+                class="process-header flex flex-col md:flex-row md:items-end justify-between border-b border-black pb-12 mb-20 gap-8">
+                <h2 class="text-5xl md:text-7xl font-black tracking-tighter uppercase max-w-2xl leading-[0.9]">Closed
+                    Loop Process.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-24 gap-x-16 relative">
+                <!-- Step 1 -->
+                <div class="process-step group">
+                    <div class="font-black text-6xl text-black/10 absolute -mt-10 -ml-4 tracking-tighter">01</div>
+                    <div
+                        class="aspect-[16/9] w-full bg-black rounded-xl mb-8 overflow-hidden relative border border-black/5">
+                        <img src="https://images.unsplash.com/photo-v_m94zTBa_Q?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fishermen collecting nets"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 saturate-0 group-hover:saturate-100">
+                        <a href="https://unsplash.com/photos/v_m94zTBa_Q" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">Unsplash Reference</a>
+                    </div>
+                    <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase">Collection</h3>
+                    <p class="text-black/60 font-medium tracking-tight">We compensate artisanal fishers directly for
+                        end-of-use nets, turning a waste problem into coastal community empowerment.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step group md:mt-24">
+                    <div class="font-black text-6xl text-black/10 absolute -mt-10 -ml-4 tracking-tighter">02</div>
+                    <div
+                        class="aspect-[16/9] w-full bg-black rounded-xl mb-8 overflow-hidden relative border border-black/5">
+                        <img src="https://images.unsplash.com/photo-u8UtYRnktAo?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Recycling facility"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 saturate-0 group-hover:saturate-100">
+                        <a href="https://unsplash.com/photos/u8UtYRnktAo" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">Unsplash Reference</a>
+                    </div>
+                    <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase">Processing</h3>
+                    <p class="text-black/60 font-medium tracking-tight">Nets are sorted, washed, and shredded in
+                        specialized facilities to remove all impurities and prepare the raw nylon.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step group">
+                    <div class="font-black text-6xl text-black/10 absolute -mt-10 -ml-4 tracking-tighter">03</div>
+                    <div
+                        class="aspect-[16/9] w-full bg-black rounded-xl mb-8 overflow-hidden relative border border-black/5">
+                        <img src="https://images.unsplash.com/photo-1uM6yzI_2Co?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plastic pellets"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 saturate-0 group-hover:saturate-100">
+                        <a href="https://unsplash.com/photos/1uM6yzI_2Co" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">Unsplash Reference</a>
+                    </div>
+                    <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase">Pelletization</h3>
+                    <p class="text-black/60 font-medium tracking-tight">The material is extruded and chopped into
+                        premium NetPlus® pellets—functioning precisely like virgin plastic inputs.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step group md:mt-24">
+                    <div class="font-black text-6xl text-black/10 absolute -mt-10 -ml-4 tracking-tighter">04</div>
+                    <div
+                        class="aspect-[16/9] w-full bg-black rounded-xl mb-8 overflow-hidden relative border border-black/5">
+                        <img src="https://images.unsplash.com/photo-aSJj_tFa3ik?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Manufacturing process"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 saturate-0 group-hover:saturate-100">
+                        <a href="https://unsplash.com/photos/aSJj_tFa3ik" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">Unsplash Reference</a>
+                    </div>
+                    <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase">Partnerships</h3>
+                    <p class="text-black/60 font-medium tracking-tight">Brands use our tracked NetPlus inputs to create
+                        performance textiles, hardgoods, and apparel without drilling for new petroleum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Impact Counters -->
+    <section id="impact" class="bg-bureo-black text-white py-32 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center font-bold tracking-widest text-[10px] uppercase text-white/50 mb-20">Measurable
+                Impact</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-white/20 border-t border-b border-white/20 py-16">
+                <div class="stat-item flex flex-col items-center text-center">
+                    <div class="text-[12vw] md:text-8xl font-black tracking-tighter mb-2 leading-none">
+                        <span class="counter" data-target="8.5">0</span><span class="text-white/40">M</span>
+                    </div>
+                    <div class="text-sm font-bold tracking-widest uppercase">Lbs Collected</div>
+                </div>
+                <div class="stat-item flex flex-col items-center text-center pt-12 md:pt-0">
+                    <div class="text-[12vw] md:text-8xl font-black tracking-tighter mb-2 leading-none">
+                        <span class="counter" data-target="150">0</span><span class="text-white/40">+</span>
+                    </div>
+                    <div class="text-sm font-bold tracking-widest uppercase">Communities</div>
+                </div>
+                <div class="stat-item flex flex-col items-center text-center pt-12 md:pt-0">
+                    <div class="text-[12vw] md:text-8xl font-black tracking-tighter mb-2 leading-none">
+                        <span class="counter" data-target="7">0</span><span class="text-white/40">M</span>
+                    </div>
+                    <div class="text-sm font-bold tracking-widest uppercase">Lbs CO2 Avoided</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Products Section -->
+    <section id="products" class="py-32 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div
+                class="flex flex-col md:flex-row justify-between items-end mb-16 products-header border-b border-black pb-12 gap-8">
+                <h2 class="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9]">Trusted by<br>the
+                    Best.</h2>
+                <a href="#"
+                    class="px-8 py-4 bg-black text-white font-bold rounded-full hover:scale-105 transition-transform tracking-tight text-sm shrink-0">View
+                    All Partners</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="product-card group relative overflow-hidden bg-bureo-gray rounded-xl">
+                    <div class="aspect-[4/5] p-6 flex flex-col justify-between relative z-10">
+                        <div class="flex justify-between items-start w-full">
+                            <div class="font-bold tracking-tight bg-white px-4 py-2 inline-flex self-start rounded-full text-sm shadow-sm group-hover:-translate-y-1 transition-transform">
+                                Patagonia</div>
+                            <a href="https://unsplash.com/photos/312vFzTF_Io" target="_blank" rel="noopener noreferrer" class="bg-black/20 backdrop-blur-md text-white border border-white/20 text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1 hover:bg-black">Unsplash Source</a>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-2xl font-black tracking-tighter uppercase mb-2 group-hover:text-white transition-colors delay-100">
+                                Downdrift™ Jacket</h3>
+                            <p
+                                class="text-sm font-medium tracking-tight text-white/0 group-hover:text-white/90 transition-colors delay-100">
+                                Woven from 100% NetPlus material.</p>
+                        </div>
+                    </div>
+                    <!-- Image Underlay -->
+                    <div class="absolute inset-0 bg-black/5">
+                        <img src="https://images.unsplash.com/photo-312vFzTF_Io?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 mix-blend-multiply group-hover:mix-blend-normal">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card group relative overflow-hidden bg-bureo-gray rounded-xl">
+                    <div class="aspect-[4/5] p-6 flex flex-col justify-between relative z-10">
+                        <div class="flex justify-between items-start w-full">
+                            <div class="font-bold tracking-tight bg-white px-4 py-2 inline-flex self-start rounded-full text-sm shadow-sm group-hover:-translate-y-1 transition-transform">
+                                Costa</div>
+                            <a href="https://unsplash.com/photos/FLQrABpEHeA" target="_blank" rel="noopener noreferrer" class="bg-black/20 backdrop-blur-md text-white border border-white/20 text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1 hover:bg-black">Unsplash Source</a>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-2xl font-black tracking-tighter uppercase mb-2 group-hover:text-white transition-colors delay-100">
+                                Untangled Frames</h3>
+                            <p
+                                class="text-sm font-medium tracking-tight text-white/0 group-hover:text-white/90 transition-colors delay-100">
+                                Molded high-strength frames.</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/5">
+                        <img src="https://images.unsplash.com/photo-FLQrABpEHeA?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 mix-blend-multiply group-hover:mix-blend-normal">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card group relative overflow-hidden bg-bureo-gray rounded-xl">
+                    <div class="aspect-[4/5] p-6 flex flex-col justify-between relative z-10">
+                        <div class="flex justify-between items-start w-full">
+                            <div class="font-bold tracking-tight bg-white px-4 py-2 inline-flex self-start rounded-full text-sm shadow-sm group-hover:-translate-y-1 transition-transform">
+                                Carver</div>
+                            <a href="https://unsplash.com/photos/oRAqLrLPPN8" target="_blank" rel="noopener noreferrer" class="bg-black/20 backdrop-blur-md text-white border border-white/20 text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1 hover:bg-black">Unsplash Source</a>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-2xl font-black tracking-tighter uppercase mb-2 group-hover:text-white transition-colors delay-100">
+                                Commuter Daypack</h3>
+                            <p
+                                class="text-sm font-medium tracking-tight text-white/0 group-hover:text-white/90 transition-colors delay-100">
+                                Durable woven structural fabric.</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/5">
+                        <img src="https://images.unsplash.com/photo-oRAqLrLPPN8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 mix-blend-multiply group-hover:mix-blend-normal">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Call To Action -->
+    <section
+        class="py-40 px-6 md:px-12 bg-bureo-black text-white text-center flex flex-col justify-center items-center cta-section">
+        <h2
+            class="text-[14vw] md:text-[8vw] font-black leading-[0.8] tracking-tighter uppercase mb-12 mix-blend-difference">
+            Join The<br>Movement.</h2>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#"
+                class="px-10 py-5 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform tracking-tight text-lg">Partner
+                With Us</a>
+            <a href="#"
+                class="px-10 py-5 bg-transparent border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-colors tracking-tight text-lg">Contact
+                Us</a>
+        </div>
+    </section>
+
+    <!-- 9. Footer -->
+    <footer class="bg-black py-20 px-6 md:px-12 border-t border-white/20 text-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+            <div class="col-span-1 md:col-span-1">
+                <div class="text-2xl font-black tracking-tighter flex items-center gap-2 mb-6">
+                    <div class="w-6 h-6 bg-white rounded-full"></div>
+                    NETPLUS®
+                </div>
+                <p class="text-sm text-white/50 font-medium tracking-tight max-w-xs">
+                    Committed to cleaning our oceans and providing positive solutions.
+                </p>
+            </div>
+
+            <div class="md:col-span-1">
+                <h4 class="font-bold tracking-tight mb-8">Navigation</h4>
+                <ul class="space-y-4 text-sm font-medium text-white/60">
+                    <li><a href="#mission" class="hover:text-white transition-colors">Mission</a></li>
+                    <li><a href="#material" class="hover:text-white transition-colors">Material</a></li>
+                    <li><a href="#process" class="hover:text-white transition-colors">Process</a></li>
+                    <li><a href="#impact" class="hover:text-white transition-colors">Impact</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2">
+                <h4 class="font-bold tracking-tight mb-8">Join our newsletter</h4>
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Email Address"
+                        class="bg-transparent border-b border-white/30 pb-4 text-xl font-medium w-full focus:outline-none focus:border-white placeholder:text-white/30 tracking-tight transition-colors rounded-none">
+                    <button type="submit"
+                        class="self-start sm:self-end px-8 py-3 bg-white text-black rounded-full font-bold tracking-tight whitespace-nowrap hover:scale-105 transition-transform">Sign
+                        up</button>
+                </form>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-medium text-white/40 tracking-tight">
+            <p>&copy; 2026 NetPositive. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

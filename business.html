@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-bureo-black h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner | NetPlus Business Portal</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bureo: {
+                            black: '#111111',
+                            dark: '#1c1c1c',
+                            gray: '#f4f4f4',
+                            white: '#ffffff',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        tighter: '-0.04em',
+                        tight: '-0.02em',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-bureo-black text-white font-sans antialiased selection:bg-white selection:text-bureo-black h-full flex flex-col relative overflow-hidden">
+
+    <!-- Animated Video Background -->
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-20 pointer-events-none mix-blend-screen">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-farmer-walking-in-a-field-of-wheat-32-large.mp4" type="video/mp4">
+    </video>
+
+    <!-- Navbar -->
+    <nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center border-b border-white/10 bg-transparent relative z-10">
+        <a href="index.html" class="text-2xl font-black tracking-tighter flex items-center gap-2 hover:opacity-70 transition-opacity">
+            <div class="w-6 h-6 bg-white rounded-full"></div>
+            NETPLUS®
+        </a>
+        <div class="flex gap-6 items-center">
+            <div class="text-sm font-bold tracking-tight border border-white px-4 py-2 rounded-full hidden sm:block">Business Portal</div>
+            <a href="login.html" class="text-sm font-black underline tracking-tight hover:opacity-70">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Form Section -->
+    <main class="flex-grow flex items-center justify-center py-20 px-6 md:px-12 relative z-10">
+        <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-5 gap-16">
+            
+            <div class="md:col-span-2">
+                <h1 class="text-[10vw] md:text-6xl font-black leading-[0.9] tracking-tighter uppercase mb-6">Partner<br>With Us.</h1>
+                <p class="text-white/60 font-medium tracking-tight mb-8">Register the type of waste materials you wish to send to our facilities, or list sustainable goods you wish to sell on our marketplace.</p>
+                
+                <div class="p-6 bg-bureo-dark border border-white/10 rounded-xl mb-8">
+                    <h3 class="font-bold text-sm tracking-tight mb-2 uppercase text-white/50">Current Demand</h3>
+                    <ul class="space-y-2 text-sm font-medium">
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Nylon Fish Nets</span><span class="text-green-400">High</span></li>
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Farm Products</span><span class="text-green-400">High</span></li>
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Ocean Plastic (PET)</span><span class="text-yellow-400">Med</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 bg-white text-bureo-black p-8 md:p-12 rounded-2xl">
+                <h2 class="text-2xl font-black tracking-tighter mb-8 border-b border-black/10 pb-4">Submission Form</h2>
+                
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold tracking-widest uppercase mb-2 text-black/60">Company Name</label>
+                            <input type="text" class="w-full border-b border-black/20 focus:border-black py-2 outline-none font-medium bg-transparent" placeholder="Acme Logistics">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold tracking-widest uppercase mb-2 text-black/60">Contact Email</label>
+                            <input type="email" class="w-full border-b border-black/20 focus:border-black py-2 outline-none font-medium bg-transparent" placeholder="partner@company.com">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold tracking-widest uppercase mb-4 text-black/60">Submission Type</label>
+                        <div class="flex gap-4">
+                            <label class="flex-1 flex items-center justify-center p-4 border border-black/20 rounded-lg cursor-pointer hover:border-black transition-colors focus-within:ring-2 ring-black">
+                                <input type="radio" name="submissionType" class="mr-3" checked>
+                                <span class="font-bold text-sm tracking-tight">Supply Waste</span>
+                            </label>
+                            <label class="flex-1 flex items-center justify-center p-4 border border-black/20 rounded-lg cursor-pointer hover:border-black transition-colors focus-within:ring-2 ring-black">
+                                <input type="radio" name="submissionType" class="mr-3">
+                                <span class="font-bold text-sm tracking-tight">Sell Products</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold tracking-widest uppercase mb-2 text-black/60">Material / Product Category</label>
+                        <select class="w-full border-b border-black/20 focus:border-black py-2 outline-none font-medium bg-transparent cursor-pointer">
+                            <option value="" disabled selected>Select a category...</option>
+                            <option value="nets">Fishing Nets (Nylon)</option>
+                            <option value="fashion">Sustainable Fashion Apparel</option>
+                            <option value="farm">Farm Products & Organic Goods</option>
+                            <option value="pet">Ocean PET Plastic</option>
+                            <option value="other">Other Sustainable Solutions</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold tracking-widest uppercase mb-2 text-black/60">Estimated Quantity / Volume</label>
+                        <input type="text" class="w-full border-b border-black/20 focus:border-black py-2 outline-none font-medium bg-transparent" placeholder="e.g. 500 lbs monthly, or 50 SKU items">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold tracking-widest uppercase mb-2 text-black/60">Additional Details</label>
+                        <textarea class="w-full border-b border-black/20 focus:border-black py-2 outline-none font-medium bg-transparent resize-none h-24" placeholder="Describe the condition of your materials or the specifications of your product..."></textarea>
+                    </div>
+
+                    <button type="button" class="w-full py-4 mt-8 bg-black text-white font-bold rounded-full hover:scale-[1.02] transition-transform tracking-tight text-sm">Submit Proposal</button>
+                    <p class="text-[10px] text-center text-black/40 font-medium mt-4">By submitting, you agree to our processing and recycling terms.</p>
+                </form>            
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 px-6 md:px-12 text-white/50 text-sm font-medium border-t border-white/10 mt-auto relative z-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <p>&copy; 2026 NetPositive Business Network</p>
+            <a href="index.html" class="hover:text-white transition-colors">Return to Main Site</a>
+        </div>
+    </footer>
+
+</body>
+</html>

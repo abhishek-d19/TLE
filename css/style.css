@@ -1,0 +1,51 @@
+/* Custom CSS for Minimalist Swiss Theme */
+
+/* Clean, simple scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f4; /* bureo-gray */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111111; /* bureo-black */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+/* Base custom resets */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide elements before GSAP loads */
+.visibility-hidden {
+    visibility: hidden;
+}
+
+/* Ensures crisp rendering for the bold typography */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure mix-blend-difference works over the hero */
+#navbar.scrolled {
+    mix-blend-mode: normal;
+    background-color: white;
+    color: #111111;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+#navbar.scrolled .bg-white {
+    background-color: #111; /* invert logo circle inside black/white space */
+}
+
+#navbar.scrolled a.bg-white {
+    background-color: #111;
+    color: white;
+}
