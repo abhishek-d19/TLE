@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-white h-full">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop | NetPlus User Portal</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
+    <link href="https://unsplash.com">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,14 +37,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
     <script src="js/main.js" defer></script>
-    
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="bg-white text-bureo-black font-sans antialiased selection:bg-bureo-black selection:text-white">
 
     <!-- Navbar -->
-    <nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center border-b border-black/10 bg-white sticky top-0 z-50">
-        <a href="index.html" class="text-2xl font-black tracking-tighter flex items-center gap-2 hover:opacity-70 transition-opacity">
+    <nav
+        class="w-full py-6 px-6 md:px-12 flex justify-between items-center border-b border-black/10 bg-white sticky top-0 z-50">
+        <a href="index.html"
+            class="text-2xl font-black tracking-tighter flex items-center gap-2 hover:opacity-70 transition-opacity">
             <div class="w-6 h-6 bg-bureo-black rounded-full mix-blend-difference"></div>
             NETPLUS®
         </a>
@@ -55,8 +59,10 @@
 
     <!-- Header -->
     <header class="pt-24 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
-        <h1 class="text-[12vw] md:text-8xl font-black leading-[0.9] tracking-tighter uppercase mb-6">Sustainable<br>Market.</h1>
-        <p class="text-xl text-black/60 font-medium tracking-tight max-w-2xl">Browse goods made completely from reclaimed materials. Your purchases actively remove waste from the environment.</p>
+        <h1 class="text-[12vw] md:text-8xl font-black leading-[0.9] tracking-tighter uppercase mb-6">
+            Sustainable<br>Market.</h1>
+        <p class="text-xl text-black/60 font-medium tracking-tight max-w-2xl">Browse goods made completely from
+            reclaimed materials. Your purchases actively remove waste from the environment.</p>
     </header>
 
     <!-- Fashion Section -->
@@ -65,27 +71,41 @@
             <h2 class="text-4xl md:text-5xl font-black tracking-tighter uppercase">Fashion</h2>
             <a href="#" class="text-sm font-bold underline tracking-tight">View All</a>
         </div>
-        
+
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             <!-- Product 1 -->
             <div class="group cursor-pointer">
                 <div class="aspect-[3/4] bg-bureo-gray rounded-xl overflow-hidden mb-4 relative">
-                    <img src="https://images.unsplash.com/photo-312vFzTF_Io?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sustainable fashion jacket" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <a href="https://unsplash.com/photos/312vFzTF_Io" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    <img src="https://images.unsplash.com/photo-312vFzTF_Io?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Sustainable fashion jacket"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <a href="https://unsplash.com/photos/312vFzTF_Io" target="_blank" rel="noopener noreferrer"
+                        class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
                         Unsplash Source
                     </a>
                 </div>
                 <h3 class="font-bold tracking-tight text-lg mb-1 group-hover:underline">NetPlus® Puffer Jacket</h3>
                 <p class="text-sm text-black/60 font-medium">₹19,990.00</p>
             </div>
-            
+
             <!-- Product 2 -->
             <div class="group cursor-pointer">
                 <div class="aspect-[3/4] bg-bureo-gray rounded-xl overflow-hidden mb-4 relative">
-                    <img src="https://images.unsplash.com/photo-My-gxduiQUA?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Recycled ocean plastic t-shirt" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <a href="https://unsplash.com/photos/My-gxduiQUA" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1765207888157-83180e591b3a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    alt="Recycled ocean plastic t-shirt"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform
+                    duration-700">
+                    <a href="https://unsplash.com/photos/My-gxduiQUA" target="_blank" rel="noopener noreferrer"
+                        class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
                         Unsplash Source
                     </a>
                 </div>
@@ -96,9 +116,15 @@
             <!-- Product 3 -->
             <div class="group cursor-pointer">
                 <div class="aspect-[3/4] bg-bureo-gray rounded-xl overflow-hidden mb-4 relative">
-                    <img src="https://images.unsplash.com/photo-FLQrABpEHeA?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sustainable sunglasses" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <a href="https://unsplash.com/photos/FLQrABpEHeA" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    <img src="https://images.unsplash.com/photo-FLQrABpEHeA?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Sustainable sunglasses"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <a href="https://unsplash.com/photos/FLQrABpEHeA" target="_blank" rel="noopener noreferrer"
+                        class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
                         Unsplash Source
                     </a>
                 </div>
@@ -109,9 +135,15 @@
             <!-- Product 4 -->
             <div class="group cursor-pointer">
                 <div class="aspect-[3/4] bg-bureo-gray rounded-xl overflow-hidden mb-4 relative">
-                    <img src="https://images.unsplash.com/photo-oRAqLrLPPN8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Recycled nylon backpack" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <a href="https://unsplash.com/photos/oRAqLrLPPN8" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    <img src="https://images.unsplash.com/photo-oRAqLrLPPN8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Recycled nylon backpack"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <a href="https://unsplash.com/photos/oRAqLrLPPN8" target="_blank" rel="noopener noreferrer"
+                        class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
                         Unsplash Source
                     </a>
                 </div>
@@ -127,27 +159,39 @@
             <h2 class="text-4xl md:text-5xl font-black tracking-tighter uppercase">Farm Products</h2>
             <a href="#" class="text-sm font-bold underline tracking-tight">View All</a>
         </div>
-        
+
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             <!-- Product 1 -->
             <div class="group cursor-pointer">
                 <div class="aspect-[3/4] bg-bureo-black text-white rounded-xl overflow-hidden mb-4 relative">
-                    <img src="https://images.unsplash.com/photo-8bCtCUQUUmA?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Organic farm honey jar" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
-                    <a href="https://unsplash.com/photos/8bCtCUQUUmA" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-md text-white border border-white/20 text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-black flex items-center gap-1">
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    <img src="https://images.unsplash.com/photo-8bCtCUQUUmA?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Organic farm honey jar"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
+                    <a href="https://unsplash.com/photos/8bCtCUQUUmA" target="_blank" rel="noopener noreferrer"
+                        class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-md text-white border border-white/20 text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-black flex items-center gap-1">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
                         Unsplash Source
                     </a>
                 </div>
                 <h3 class="font-bold tracking-tight text-lg mb-1 group-hover:underline">Wildflower Honey</h3>
                 <p class="text-sm text-black/60 font-medium">₹1,899.00</p>
             </div>
-            
+
             <!-- Product 2 -->
             <div class="group cursor-pointer">
                 <div class="aspect-[3/4] bg-bureo-gray rounded-xl overflow-hidden mb-4 relative">
-                    <img src="https://images.unsplash.com/photo-xz5Oth5no_g?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Artisan crafted olive oil bottle" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <a href="https://unsplash.com/photos/xz5Oth5no_g" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    <img src="https://images.unsplash.com/photo-xz5Oth5no_g?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Artisan crafted olive oil bottle"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <a href="https://unsplash.com/photos/xz5Oth5no_g" target="_blank" rel="noopener noreferrer"
+                        class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
                         Unsplash Source
                     </a>
                 </div>
@@ -158,9 +202,15 @@
             <!-- Product 3 -->
             <div class="group cursor-pointer">
                 <div class="aspect-[3/4] bg-bureo-gray rounded-xl overflow-hidden mb-4 relative">
-                    <img src="https://images.unsplash.com/photo-2Pvleeor0hw?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Organic roasted coffee beans bag" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <a href="https://unsplash.com/photos/2Pvleeor0hw" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    <img src="https://images.unsplash.com/photo-2Pvleeor0hw?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Organic roasted coffee beans bag"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <a href="https://unsplash.com/photos/2Pvleeor0hw" target="_blank" rel="noopener noreferrer"
+                        class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
                         Unsplash Source
                     </a>
                 </div>
@@ -171,9 +221,15 @@
             <!-- Product 4 -->
             <div class="group cursor-pointer">
                 <div class="aspect-[3/4] bg-bureo-gray rounded-xl overflow-hidden mb-4 relative">
-                    <img src="https://images.unsplash.com/photo-DX6OcfT8-24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Farm-to-table organic preserves jar" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <a href="https://unsplash.com/photos/DX6OcfT8-24" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    <img src="https://images.unsplash.com/photo-DX6OcfT8-24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Farm-to-table organic preserves jar"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <a href="https://unsplash.com/photos/DX6OcfT8-24" target="_blank" rel="noopener noreferrer"
+                        class="absolute bottom-3 right-3 bg-white/90 text-black text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white flex items-center gap-1 shadow-lg">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
                         Unsplash Source
                     </a>
                 </div>
@@ -192,4 +248,5 @@
     </footer>
 
 </body>
+
 </html>
